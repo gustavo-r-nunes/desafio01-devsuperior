@@ -8,11 +8,11 @@ public class FreteService {
 
     public double shipment(Order order){
         if(order.getBasic() < 100){
-            return order.getBasic() + 20;
+            return 20;
         } else if(order.getBasic() >= 100 && order.getBasic() < 200){
-            return order.getBasic() + 12;
+            return  12;
         } else {
-            return order.getBasic();
+            return 0;
         }
     }
 }

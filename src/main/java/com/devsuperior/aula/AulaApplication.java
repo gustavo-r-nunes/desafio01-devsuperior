@@ -35,13 +35,9 @@ public class AulaApplication implements CommandLineRunner {
 		double discount = scanner.nextDouble();
 
 		Order order = new Order(codigo, basic, discount);
-		double valorFinal = 0;
-
-		valorFinal = orderService.total(order);
-		valorFinal = freteService.shipment(order) - valorFinal;
 
 		System.out.println("Pedido código " + order.getCode());
-		System.out.println("Valor total: R$" + valorFinal);
+		System.out.println("Valor total: R$" + orderService.total(order));
 
 
 	}
